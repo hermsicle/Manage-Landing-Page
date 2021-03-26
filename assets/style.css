@@ -27,28 +27,52 @@ body {
     position: relative;
 }
 
+.pattern-1-container {
+    /* border: var(--border); */
+    position: absolute;
+    overflow: hidden;
+    right: 0;
+    z-index: -1;
+}
 .pattern-1 {
+    /* border: var(--border2); */
     height: 450px;
     width: 450px;
-    position: absolute;
-    z-index: -1;
-    right: -130px;
+    position: relative;
+    right: -150px;
     top: -120px;
 }
-
+.pattern-2-container {
+    /* border: var(--border); */
+    position: absolute;
+    overflow: hidden;
+    right: -200px;
+    z-index: -1;
+    top: 520px;
+}
+.pattern-2 {
+    height: 350px;
+    width: 350px;
+    /* border: var(--border2); */
+}
 @media (min-width: 800px) {
-    .pattern-1 {
-        height: 550px;
-        width: 550px;
-        right: -170px;
+    .pattern-2-container {
+        left: -200px;
+        width: 500px;
+    }
+    .pattern-2 {
+        height: 500px;
+        width: 500px;
     }
 }
-@media (min-width: 1140px) {
+@media (min-width: 1440px) {
     .pattern-1 {
-        height: 600px;
-        width: 600px;
-        right: -70px;
-        top: -180px;
+        height: 800px;
+        width: 800px;
+    }
+    .pattern-2-container {
+        width: 800px;
+        top: 1100px;
     }
 }
 
@@ -62,6 +86,7 @@ header {
     max-width: 1140px;
     margin: 0 auto;
     position: relative;
+    overflow: hidden;
 }
 header img {
     /* border: var(--border); */
@@ -169,7 +194,7 @@ header img {
     padding-top: 30px;
     position: relative;
     max-width: 1140px;
-    margin: 0 auto;
+    margin: 0 auto 93px auto;
 }
 .hero-container-images {
     margin: 0 auto;
@@ -222,15 +247,7 @@ header img {
 .hero-container-content button:hover {
     background: var(--very-pale-red);
 }
-.pattern-2 {
-    height: 320px;
-    width: 320px;
-    /* border: var(--border); */
-    position: absolute;
-    right: -180px;
-    bottom: -100px;
-    z-index: -1;
-}
+
 
 @media (min-width: 1140px) {
     .hero-container {
@@ -267,9 +284,6 @@ header img {
     .illustration {
         height: 525px;
         width: 580px;
-    }
-    .pattern-2 {
-        display: none;
     }
 }
 
