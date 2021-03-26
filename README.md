@@ -1,6 +1,8 @@
 # Manage Landing Page
 
 This is a landing page challenge from Front End Mentors. 
+ 
+View live site here:  👉 https://hermsicle.github.io/Manage-Landing-Page/. 👈
 
 ## Features
 - View the optimal layout for the site depending on their device's screen size
