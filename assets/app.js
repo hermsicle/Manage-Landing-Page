@@ -3,20 +3,30 @@ const navContainer = document.querySelector('.nav-container')
 const emailBtn = document.getElementById('email-btn')
 const userInput = document.getElementById('email-input')
 const errorMessage = document.querySelector('.error-message')
+const form = document.querySelector('.form')
+
 
 navBtn.addEventListener('click', () => {
     navBtn.classList.toggle('active')
     navContainer.classList.toggle('nav-active')
 })
 
-emailBtn.addEventListener('click', () => {
-    console.log(userInput.value)
-    if(userInput.value === '') {
-        console.log('enter a valid email')
-        userInput.classList.toggle('email-active')
-        errorMessage.classList.toggle('error-active')
+function validateEMail(email) {
+    let re = /\S+@\S+\.\S+/;
+    // console.log(re.test(email)) 
+    if(!re.test(email)) {
+        userInput.classList.add('email-active')
+        errorMessage.classList.add('error-active')
+    } else {
+        userInput.classList.remove('email-active')
+        errorMessage.classList.remove('error-active')
     }
+}
+
+emailBtn.addEventListener('click', () => {
+    validateEMail(userInput.value)
 })
+
 
 
 let slideIndex = 1
